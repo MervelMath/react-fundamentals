@@ -9,3 +9,7 @@
 .ProductsTable .Even {
     background-color: #445e8d;
 }
+
+.ProductsTable .Odd {
+    background-color: #e0e8f5;
+}
