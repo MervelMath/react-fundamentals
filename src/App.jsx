@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import './App.css'
-import FirstComponent from './components/basic/First'
-import WithParameter from './components/basic/WithParameter'
-import Fragment from './components/basic/Fragment'
-import Random from './components/basic/Random'
-import Family from './components/basic/Family'
-import FamilyMember from './components/basic/FamilyMember'
-import Card from './components/layout/Card'
-import StudentsList from './components/Repeat/StudentsList'
-import ProductsTable from './components/Repeat/ProductsTable'
+import "./App.css";
+import FirstComponent from "./components/basic/First";
+import WithParameter from "./components/basic/WithParameter";
+import Fragment from "./components/basic/Fragment";
+import Random from "./components/basic/Random";
+import Family from "./components/basic/Family";
+import FamilyMember from "./components/basic/FamilyMember";
+import Card from "./components/layout/Card";
+import StudentsList from "./components/Repeat/StudentsList";
+import ProductsTable from "./components/Repeat/ProductsTable";
+import EvenOrOdd from "./components/Conditional/EvenOrOdd";
+import UserInfo from "./components/Conditional/UserInfo";
+import DirectFather from "./components/Comunication/DirectFather";
+import IndirectFather from "./components/Comunication/IndirectFather";
 
 //Com export default, pode-se usar método anônimo (sem necessidade de nomear o método).
 //Se remover o retorno "default", não pode-se usar método anônimo (sem nome).
@@ -23,6 +27,20 @@ export default () => (
     <h1>React Fundamentals</h1>
 
     <div className="Cards">
+      <Card title="#10 Indirect Comunication" color="#FA6900">
+        <IndirectFather />
+      </Card>
+
+      <Card title="#09 Direct Comunication" color="#FA6900">
+        <DirectFather />
+      </Card>
+
+      <Card title="#08 Even or Odd" color="#FA6900">
+        <EvenOrOdd number={20} />
+        <UserInfo user={{ name: "Matheus" }} />
+        <UserInfo user={{}} />
+      </Card>
+
       <Card title="#07 Products Table" color="#FA6900">
         <ProductsTable />
       </Card>
