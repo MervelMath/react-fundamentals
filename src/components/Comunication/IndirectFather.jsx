@@ -1,15 +1,16 @@
-import React from "react";
+import React, {useState} from "react";
 import IndirectSon from "./IndirectSon";
 
 export default (props) => {
-  let name = "?";
-  let age = 0;
-  let nerd = false;
+  
+  const [name, setName] = useState("?"); //Usestate inicializa.
+  const [age, setAge] = useState(0);
+  const [nerd, setNerd] = useState(false);
   
   function whenClickFatherFunction(nameParam, ageParam, nerdParam) {
-    nerd = nerdParam;
-    age = ageParam;
-    name = nameParam;
+    setNerd(nerdParam);
+    setAge(ageParam);
+    setName(nameParam);
 
     console.log(nerd, age, name);
   }
@@ -19,7 +20,7 @@ export default (props) => {
       <div>
         <span>{name}</span>
         <span>{age}</span>
-        <span>{nerd}</span>
+        <span>{nerd ? 'true':'false'}</span>
       </div>
       <IndirectSon whenClick={whenClickFatherFunction}></IndirectSon>
     </div>

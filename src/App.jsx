@@ -14,6 +14,8 @@ import EvenOrOdd from "./components/Conditional/EvenOrOdd";
 import UserInfo from "./components/Conditional/UserInfo";
 import DirectFather from "./components/Comunication/DirectFather";
 import IndirectFather from "./components/Comunication/IndirectFather";
+import Input from "./components/Form/Input";
+import Counter from "./components/Counter/Counter";
 
 //Com export default, pode-se usar método anônimo (sem necessidade de nomear o método).
 //Se remover o retorno "default", não pode-se usar método anônimo (sem nome).
@@ -27,6 +29,14 @@ export default () => (
     <h1>React Fundamentals</h1>
 
     <div className="Cards">
+      <Card title="#12 Counter" color="#FA6900">
+        <Counter initialNumber={10} />
+      </Card>
+
+      <Card title="#11 Cards" color="#FA6900">
+        <Input />
+      </Card>
+
       <Card title="#10 Indirect Comunication" color="#FA6900">
         <IndirectFather />
       </Card>
