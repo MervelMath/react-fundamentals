@@ -16,6 +16,7 @@ import DirectFather from "./components/Comunication/DirectFather";
 import IndirectFather from "./components/Comunication/IndirectFather";
 import Input from "./components/Form/Input";
 import Counter from "./components/Counter/Counter";
+import Mega from "./components/Mega/Mega";
 
 //Com export default, pode-se usar método anônimo (sem necessidade de nomear o método).
 //Se remover o retorno "default", não pode-se usar método anônimo (sem nome).
@@ -29,6 +30,10 @@ export default () => (
     <h1>React Fundamentals</h1>
 
     <div className="Cards">
+      <Card title="#13 Mega" color="#FA6900">
+        <Mega />
+      </Card>
+
       <Card title="#12 Counter" color="#FA6900">
         <Counter initialNumber={10} />
       </Card>

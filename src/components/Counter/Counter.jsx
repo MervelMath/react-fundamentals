@@ -1,5 +1,8 @@
 import './Counter.css'
 import React, { Component } from "react";
+import Display from './Display';
+import Buttons from './Buttons';
+import PassForm from './PassForm';
 
 class Counter extends Component {
   //Um exemplo usando classe. Mas podemos usar 'function'.
@@ -24,9 +27,9 @@ class Counter extends Component {
     });
   };
 
-  setPass = (event) => {
+  setPass = (newPass) => {
     this.setState({
-      pass: +event.target.value, //'+' converte para inteiro.
+      pass: newPass, //'+' converte para inteiro.
     });
   };
 
@@ -34,18 +37,9 @@ class Counter extends Component {
     return (
       <div className='Counter'>
         <h2>Counter</h2>
-        <div>
-          <label htmlFor="passInput">Pass:</label>
-          <input
-            id="passInput"
-            type="number"
-            value={this.state.pass}
-            onChange={this.setPass}
-          />
-        </div>
-        <h2>{this.state.number}</h2>
-        <button onClick={this.increment}>+</button>
-        <button onClick={this.decrement}>-</button>
+        <Display number={this.state.number}/>
+        <PassForm pass={this.state.pass} setPass={this.setPass}/>
+        <Buttons increment={this.increment} decrement={this.decrement}/>
       </div>
     );
   }
